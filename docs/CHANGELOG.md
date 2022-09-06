@@ -6,9 +6,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [0.1.6] - 2022-09-06
 ### Added
-- **SnippyCode**
-- **Add new snippet** :
-  -  `snip NAME` update a snippet with a given name.
+- **Add new snippet** : add new snippets with a single command :
+  -  `snip NAME` add a snippet with a given name.
   -  `snip NAME PATH` add a snippet with a given name from a given file.
 - **Update snippet** : `snip-up NAME` update a snippet with a given name.
 - **Delete snippet** : `snip-rm NAME` delete a snippet with a given name.
