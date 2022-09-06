@@ -1,23 +1,11 @@
 # !./bin/python3
 # *-* coding: utf-8 *-*
 '''
-                                     SETUP
-===============================================================================
-                               Short Description.
--------------------------------------------------------------------------------
-
-:Description:
-   ...
-
-:Usage:
-    ...
-
 :Authors:
     Fabio Craig Wimmer Florey
 
 :Version:
     0.0.1-dev
-
 '''
 from __future__ import annotations
 
