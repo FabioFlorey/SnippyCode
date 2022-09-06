@@ -48,5 +48,4 @@ The code is open source and available for anyone to use and modify. Please see t
 ![Fork](https://img.shields.io/github/forks/FabioFlorey/SnippyCode?style=social)&emsp;
 ![Stars](https://img.shields.io/github/stars/FabioFlorey/SnippyCode?style=social)&emsp;
 ![Watchers](https://img.shields.io/github/watchers/FabioFlorey/SnippyCode?style=social)&emsp;
-![Contributors](https://img.shields.io/github/contributors/FabioFlorey/SnippyCode)
 
