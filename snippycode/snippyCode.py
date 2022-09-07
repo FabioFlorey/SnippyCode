@@ -67,4 +67,4 @@ def delete():
         Status(e).failed
 
 if __name__ == '__main__':
-    update()
+    pass
