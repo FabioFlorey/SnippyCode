@@ -20,8 +20,9 @@ class Status:
     def fmt_print(self, format:str):
         message = '╍╍╍✂ ' + \
         '╌'*72+'\n' + \
-        f'{self.message:^78s}'
-
+        (f'{self.message:^78s}' 
+         if isinstance(self.message, str)
+         else f'{repr(self.message):^78s}')
         print(f'\033{format}{message}\033[0m')
 
     @property
