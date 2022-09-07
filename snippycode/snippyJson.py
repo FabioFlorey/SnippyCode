@@ -10,8 +10,8 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 
-from .snippyCopy import clipboard
-from .snippyDocument import Document
+from snippycode.snippyCopy import clipboard
+from snippycode.snippyDocument import Document
 
 @dataclass
 class Json:
