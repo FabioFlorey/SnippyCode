@@ -31,8 +31,14 @@ The project has the following features:
 - [x] **Terminal agnosticism** :  It works on any terminal and supports relative paths.
 
 ## Installation and Usage
+### Release
+You can check the most recent release on [PyPi](https://pypi.org/project/SnippyCode/).
+
 ### Installation
-To install the project, with `pip` by typing `pip install snippycode` in your terminal.
+Install the project with `pip` by typing `pip install snippycode` in your terminal.
+
+### Upgrade
+Upgrade the project with `pip` by typing `pip install snippycode --upgrade` in your terminal.
 
 ### Usage
 TODO
