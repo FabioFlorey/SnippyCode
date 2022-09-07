@@ -14,9 +14,15 @@ from __future__ import annotations
 
 from argparse import ArgumentParser
 
-from .snippyFile import SnippetFromDocument, SnippetFromClipboard
-from .snippyStatus import Status
+from snippycode.snippyFile import SnippetFromDocument, SnippetFromClipboard
+from snippycode.snippyStatus import Status
 
+
+def json_choice(arguments):
+    if arguments.path:
+        return SnippetFromDocument(arguments.name,
+                                   arguments.path)
+    return SnippetFromClipboard(arguments.name)
 
 parser = ArgumentParser(description = __doc__)
 
@@ -29,9 +35,7 @@ parser.add_argument('path',
 
 arguments = parser.parse_args()
 
-json = (SnippetFromDocument(arguments.name, arguments.path) 
-            if arguments.path else
-            SnippetFromClipboard(arguments.name))
+json = json_choice(arguments)
 
 def list():
     Status(f'You have the following snippets:').bold
@@ -42,22 +46,25 @@ def write():
     try:
         json.write()
         Status(f'Successfully added `{json.json.prefix}` to your snippets!').success
-    except Exception:
-        Status(Exception).failed
+    except Exception as e:
+        Status(e).failed
 
 def update():
     try:
         json.update()
-        Status(f'Successfully updated `{json.json.prefix}` in your snippets!').success
-    except Exception:
-        Status(Exception).failed
+        Status(f'Successfully updated `{json.json.prefix}` your snippets!').success
+    except KeyError as e:
+        Status(f'The key `{json.json.prefix}` does not exists.').failed
+    except Exception as e:
+        Status(e).failed
+    
 
 def delete():
     try:
         json.delete()
         Status(f'Successfully deleted `{json.json.prefix}` from your snippets!').success
-    except Exception:
-        Status(Exception).failed
+    except Exception as e:
+        Status(e).failed
 
 if __name__ == '__main__':
-    pass
+    update()
